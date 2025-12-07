@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escena con Casa</title>
+    <!-- script de A-Frame versión 1.0.0 -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Entidad de la casa con modelo 3D -->
+        <a-entity 
+            obj-model='obj: casa.obj; mtl: casa.mtl'
+            position="-3 0 0" 
+            scale=".35 .35 .35" 
+            rotation="0 0 0"
+            animation__rotation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+        </a-entity>
+        
+        <!-- Cielo azul -->
+        <a-sky color="#87CEEB"></a-sky>
+        
+        <!-- Cámara con controles -->
+        <a-entity camera look-controls wasd-controls position="0 1.5 3"></a-entity>
+    </a-scene>
+</body>
+</html>
